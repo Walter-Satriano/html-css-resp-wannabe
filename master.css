@@ -1,9 +1,24 @@
+/*REGOLE GENERALI*/
 .row {
   width: 992px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
 }
+
+[background="grey"]{
+  background-color: #f9f9f9;
+}
+
+
+img{
+  height: 200px;
+}
+
+.clear {
+  clear:both;
+}
+
 
 /* BLOCCO LEZIONI */
 #lezioni .row > .left, #lezioni .row > .right{
@@ -71,8 +86,8 @@
   #steps .row > .left,
   #steps .row > .central,
   #steps .row > .right, h1, h3, p {
-    float: none;
     width: 100%;
+    float: none;
     margin-right: auto;
     margin-left: auto;
   }
@@ -94,8 +109,7 @@
   }
 }
 
-
-/* BLOCCO PERCHE */
+/* BLOCCO PERCHE (modificato per visualizzazione browser 3 colonne)*/
 #why {
   text-align: center;
 }
@@ -107,7 +121,8 @@
 #why .row > .first,
 #why .row > .second,
 #why .row > .third {
-  width: 100%;
+  width: calc(100%/3);
+  float: left;
   margin-top: 80px;
 }
 
@@ -117,17 +132,32 @@
   padding:30px
 }
 
-/* COMMON */
+/*BLOCCO STEPS RESPONSIVE PER SMARTPHONE*/
+@media screen and (max-width: 450px) {
 
-[background="grey"]{
-  background-color: #f9f9f9;
-}
+  #why .row > .first,
+  #why .row > .second,
+  #why .row > .third {
+    width: 100%;
+    float: none;
+  }
 
+  #why h1 {
+    font-size: 40px;
+    width: 70%;
+  }
 
-img{
-  height: 200px;
-}
+  #why h3 {
+    font-size: 35px;
+    width: 70%;
+  }
 
-.clear {
-  clear:both;
+  #why p {
+    font-size: 27px;
+    width: 70%;
+  }
+
+  #why img {
+    height: 140px;
+  }
 }
