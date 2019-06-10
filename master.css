@@ -22,6 +22,38 @@
   text-align: center;
 }
 
+
+/*BLOCCO LEZIONI RESPONSIVE PER SMARTPHONE*/
+
+@media screen and (max-width: 450px) {
+  #lezioni .row > .left, #lezioni .row > .right {
+    width: 100%;
+    float: none;
+  }
+
+  #lezioni h3, h1 {
+    font-size: 35px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #lezioni p {
+    font-size: 27px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
 /* BLOCCO STEPS */
 #steps .row > .left,
 #steps .row > .central,
@@ -37,6 +69,10 @@
 /* BLOCCO PERCHE */
 #why {
   text-align: center;
+}
+
+#why .row {
+  background-color: #f9f9f9;
 }
 
 #why .row > .first,
